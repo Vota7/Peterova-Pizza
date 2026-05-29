@@ -1,3 +1,10 @@
+<?php
+$jmeno = $_POST["jmenoprijmeni"];
+$adresa = $_POST["adresa"];
+$cislo = $_POST["cislo"];
+$email = $_POST["email"];
+$poznamka = $_POST["poznamka"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,40 +25,19 @@
         <a href="index.html"><h1>Peterova pizza</h1></a>
         <a href="kosik.html"><img src="Images/Kosik.png"></a>
     </header>
-
-    <h2 style="margin-left: 5%;">Košík</h2>
-    <div class="contentGrid" style="height: 50vh;">
-        <div class="JEDENOBJEKT">
-            <img src="Images/Pizza1.png">
-            <div>
-                <p>Sýrová</p>
-                <button style="font-size: 200%;">+</button>
-                <p><b>1</b></p>
-                <button style="font-size: 200%;">-</button>
-            </div>
-        </div>
-        <div class="JEDENOBJEKT">
-            <img src="Images/chiliPizza.jpg">
-            <div>
-                <p>Chili</p>
-                <button style="font-size: 200%;">+</button>
-                <p><b>1</b></p>
-                <button style="font-size: 200%;">-</button>
-            </div>
-        </div>
-        <div class="JEDENOBJEKT">
-            <img src="Images/Fanta.jpg">
-            <div>
-                <p>Fanta</p>
-                <button style="font-size: 200%;">+</button>
-                <p><b>2</b></p>
-                <button style="font-size: 200%;">-</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="odkazNaObjednani">
-        <a href="objednavani.html">Přejít k objednání</a>
+    
+    <h2>Objednávka č.143:</h2>
+    <div class="php">
+        <h3>Obsah objednáky</h3>
+        <p><strong>Sýrová: 1</strong></p>
+        <p><strong>Chili: 1</strong></p>
+        <p><strong>Fanta: 2</strong></p>
+        <h3>Info</h3>
+        <p><strong>Jméno a příjmení:</strong> <?= htmlspecialchars($jmeno) ?></p>
+        <p><strong>Adresa:</strong> <?= htmlspecialchars($adresa) ?></p>
+        <p><strong>Telefonní číslo:</strong> <?= htmlspecialchars($cislo) ?></p>
+        <p><strong>Email:</strong> <?= htmlspecialchars($email) ?></p>
+        <p><strong>Poznámka:</strong> <?= htmlspecialchars($poznamka) ?></p>
     </div>
 
     <footer>
@@ -74,6 +60,5 @@
         </div>
         <p>Peterova Pizza 2026©</p>
     </footer>
-
 </body>
 </html>

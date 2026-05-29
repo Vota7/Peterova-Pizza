@@ -5,16 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Images/PPFavicon.png">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-</style>
-
     </style>
-
     <link rel="stylesheet" href="style.css">
-
     <title>Peterova Pizza</title>
 </head>
 
@@ -25,22 +20,46 @@
     </header>
 
     <h2 style="margin-left: 5%;">Shrnutí objednávky</h2>
-    <div class="contentGrid">
+    <div class="contentGrid" style="height: 50vh; margin-bottom: 0%;">
         <div class="JEDENOBJEKT">
             <img src="Images/Pizza1.png">
             <div>
-                <p>Salámová</p>
-                <button><img src="Images/Kosik.png"></button>
+                <p>Sýrová</p>
+                <button style="font-size: 200%;">+</button>
+                <p><b>1</b></p>
+                <button style="font-size: 200%;">-</button>
             </div>
         </div>
         <div class="JEDENOBJEKT">
-            <img src="Images/cola.jpg">
+            <img src="Images/chiliPizza.jpg">
             <div>
-                <p>Salámová</p>
-                <button><img src="Images/Kosik.png"></button>
+                <p>Chili</p>
+                <button style="font-size: 200%;">+</button>
+                <p><b>1</b></p>
+                <button style="font-size: 200%;">-</button>
+            </div>
+        </div>
+        <div class="JEDENOBJEKT">
+            <img src="Images/Fanta.jpg">
+            <div>
+                <p>Fanta</p>
+                <button style="font-size: 200%;">+</button>
+                <p><b>2</b></p>
+                <button style="font-size: 200%;">-</button>
             </div>
         </div>
     </div>
+
+    <h2 style="margin-left: 5%;">Informace</h2>
+        <form action="objednavka.php" method="post">
+            <input type="text" name="jmenoprijmeni" placeholder="Jméno a příjmení*" required>
+            <input type="text" name="adresa" placeholder="Adresa*" required>
+            <input type="number" name="cislo" placeholder="Tel. číslo*" required>
+            <input type="email" name="email" placeholder="Email*" required>
+            <input type="text" name="poznamka" placeholder="Poznámka">
+            <p style="font-size: 200%;">* označuje povinné pole</p>
+            <input type="submit" value="Objednat" style="margin-top: 0%; margin-bottom: 5%; width: 15%;">
+        </form>
 
     <footer>
         <div class="footer_peter">
@@ -62,6 +81,5 @@
         </div>
         <p>Peterova Pizza 2026©</p>
     </footer>
-
 </body>
 </html>
